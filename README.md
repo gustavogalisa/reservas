@@ -4,10 +4,10 @@ IFPB 2020.2
 ### Descrição
 
 ### Tasklist
--[ ] Iniciar projeto Angular
--[x] Criar protótipo
--[ ] Separar atribuições
--[ ] ...
+- [ ] Iniciar projeto Angular
+- [x] Criar protótipo
+- [ ] Separar atribuições
+- [ ] ...
 
 ### Desenvolvido por:
 * Diogo Gomes
