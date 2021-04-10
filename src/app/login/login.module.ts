@@ -1,0 +1,33 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatFormFieldControl, MatFormFieldModule, MatLabel} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {FormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatButtonModule} from "@angular/material/button";
+
+@NgModule({
+  declarations: [
+    LoginComponent
+  ],
+  exports: [
+    LoginComponent
+  ],
+  imports: [
+    BrowserAnimationsModule,
+    CommonModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatButtonModule
+  ]
+})
+export class LoginModule { }
