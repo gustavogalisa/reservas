@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from "./login/login/login.component";
-import {ListagemAreasComponent} from "./areas/listagem-areas/listagem-areas.component";
+import {ListingAreasComponent} from "./areas/listing-areas/listing-areas.component";
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'listar-areas',
-    component: ListagemAreasComponent
+    component: ListingAreasComponent
   }
 ];
 
