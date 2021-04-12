@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LoginModule} from "./login/login.module";
-import { MenuComponent } from './layout/menu/menu.component';
+import {LayoutModule} from "./layout/layout.module";
+import { ListingAreasComponent } from './areas/listing-areas/listing-areas.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    ListingAreasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LoginModule
+    LoginModule,
+    LayoutModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
