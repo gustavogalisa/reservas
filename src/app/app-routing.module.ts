@@ -9,7 +9,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'listar-areas',
+    path: 'listing-areas',
     component: ListingAreasComponent
   }
 ];

@@ -8,6 +8,9 @@ import {LoginModule} from "./login/login.module";
 import {LayoutModule} from "./layout/layout.module";
 import { ListingAreasComponent } from './areas/listing-areas/listing-areas.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {FlexModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import {MatCardModule} from "@angular/material/card";
     BrowserAnimationsModule,
     LoginModule,
     LayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    FlexModule
   ],
   providers: [],
   bootstrap: [AppComponent]
