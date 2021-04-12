@@ -11,6 +11,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {FlexModule} from "@angular/flex-layout";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FlexModule} from "@angular/flex-layout";
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    FlexModule
+    FlexModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

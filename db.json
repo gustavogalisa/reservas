@@ -1,0 +1,32 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "name": "Piscina",
+      "image": "url_imagem",
+      "description": "Piscina Cobertura",
+      "reserves": []
+    },
+    {
+      "id": 2,
+      "name": "Piscina",
+      "image": "url_imagem",
+      "description": "Piscina Cobertura",
+      "reserves": []
+    },
+    {
+      "id": 3,
+      "name": "Piscina",
+      "image": "url_imagem",
+      "description": "Piscina Cobertura",
+      "reserves": []
+    },
+    {
+      "id": 4,
+      "name": "Piscina",
+      "image": "url_imagem",
+      "description": "Piscina Cobertura",
+      "reserves": []
+    }
+  ]
+}
