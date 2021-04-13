@@ -8,14 +8,14 @@
       <img
         class="card-image"
         mat-card-image
-        src="https://avadhhomes.com/wp-content/uploads/2016/08/Swimming-Pool.jpg"
-        alt="Piscina">
+        src="{{area.image}}"
+        alt="{{area.name}}">
 
-      <mat-card-content>
-        <p>Horário: 08:00 às 22:00</p>
+      <mat-card-content class="description">
+        <p>{{area.description}}</p>
       </mat-card-content>
 
-      <mat-card-actions fxLayoutAlign="space-around">
+      <mat-card-actions class="footer" fxLayoutAlign="space-around">
         <button mat-mini-fab color="primary"><mat-icon>add</mat-icon></button>
         <button mat-mini-fab><mat-icon>menu</mat-icon></button>
       </mat-card-actions>
