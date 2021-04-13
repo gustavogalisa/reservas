@@ -12,11 +12,17 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {FlexModule} from "@angular/flex-layout";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {RegistrationAreasComponent} from "./areas/registration-areas/registration-areas.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatDialogModule} from "@angular/material/dialog";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListingAreasComponent,
+    RegistrationAreasComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,11 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatButtonModule,
     MatIconModule,
     FlexModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

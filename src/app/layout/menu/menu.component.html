@@ -1,8 +1,13 @@
 <div class="menu-background">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-        <button mat-menu-item>Item 3</button>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu" color="primary">
+        <button
+          mat-menu-item
+          (click)="openDialog()"
+        >Cadastrar área</button>
+        <button
+          mat-menu-item
+          [routerLink]="['/listing-areas']"
+        >Listar áreas</button>
     </mat-menu>
 </div>

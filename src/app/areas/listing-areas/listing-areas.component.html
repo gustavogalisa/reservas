@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <div class="main">
   <div id="content" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
-    <mat-card class="card" *ngFor="let area of areas">
+    <mat-card class="card" *ngFor="let area of areas" id="{{area.id}}">
       <mat-card-header>
         <mat-card-title>{{area.name}}</mat-card-title>
       </mat-card-header>
@@ -16,8 +16,19 @@
       </mat-card-content>
 
       <mat-card-actions class="footer" fxLayoutAlign="space-around">
-        <button mat-mini-fab color="primary"><mat-icon>add</mat-icon></button>
-        <button mat-mini-fab><mat-icon>menu</mat-icon></button>
+        <button
+          mat-raised-button
+          color="primary"
+          matTooltip="Adicionar reserva"
+        >Reservar</button>
+        <button mat-raised-button>Listar</button>
+        <button
+          mat-mini-fab
+          *ngIf="true"
+          (click)="removeArea(this.area.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
       </mat-card-actions>
     </mat-card>
 

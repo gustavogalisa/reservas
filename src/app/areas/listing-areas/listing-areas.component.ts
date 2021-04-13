@@ -11,11 +11,17 @@ export class ListingAreasComponent implements OnInit {
 
   areas: Array<Area>;
 
-  constructor(private areaService: AreaService) { }
+  constructor(private areaService: AreaService) {
+  }
 
   ngOnInit(): void {
     this.areaService.list().subscribe(
       areas => this.areas = areas
     );
+  }
+
+  removeArea(id: number): void{
+    this.areaService.remover(id).subscribe()
+    window.location.reload();
   }
 }
