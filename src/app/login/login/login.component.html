@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" (keyup.enter)="login()">
   <mat-card class="card-login" fxLayout="column" fxLayoutAlign="space-around center" >
     <mat-card-header>
       <mat-card-title id="card-title" fxLayout="column">
@@ -10,13 +10,13 @@
       <mat-form-field appearance="fill">
         <mat-label>Usuário</mat-label>
         <mat-icon matPrefix>person</mat-icon>
-        <input matInput placeholder="username">
+        <input matInput [(ngModel)]="input_user" placeholder="username">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-icon matPrefix>lock</mat-icon>
         <mat-label>Senha</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" placeholder="****">
+        <input matInput [(ngModel)]="input_pass" [type]="hide ? 'password' : 'text'" placeholder="****" required>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -27,7 +27,7 @@
         class="login-btn"
         mat-flat-button
         color="primary"
-        [routerLink]="['/listing-areas']"
+        (click)="login()"
       >Entrar</button>
     </mat-card-footer>
   </mat-card>

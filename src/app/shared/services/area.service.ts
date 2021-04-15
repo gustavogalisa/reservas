@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {Area} from "../model/area";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {stringify} from "@angular/compiler/src/util";
 
 @Injectable({
   providedIn: 'root'
