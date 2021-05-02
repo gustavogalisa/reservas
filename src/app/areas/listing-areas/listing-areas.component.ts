@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Area} from "../../shared/model/area";
-import {AreaService} from "../../shared/services/area.service";
+import {Area} from '../../shared/model/area';
+import {AreaService} from '../../shared/services/area.service';
+import { AreaFirestoreService } from '../../shared/services/area-firestore.service';
 
 @Component({
   selector: 'app-listing-areas',
@@ -11,7 +12,7 @@ export class ListingAreasComponent implements OnInit {
 
   areas: Array<Area>;
 
-  constructor(private areaService: AreaService) {
+  constructor(private areaService: AreaFirestoreService) {
   }
 
   ngOnInit(): void {
@@ -20,8 +21,8 @@ export class ListingAreasComponent implements OnInit {
     );
   }
 
-  removeArea(id: number): void{
-    this.areaService.remover(id).subscribe()
-    window.location.reload();
+  removeArea(id: string): void{
+    this.areaService.remover(id).subscribe();
+    // window.location.reload();
   }
 }

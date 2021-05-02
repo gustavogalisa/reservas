@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AreaService } from './area.service';
+import { AreaFirestoreService } from './area-firestore.service';
 
-describe('AreaService', () => {
-  let service: AreaService;
+describe('UsuarioFirestoreService', () => {
+  let service: AreaFirestoreService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AreaService);
+    service = TestBed.inject(AreaFirestoreService);
   });
 
   it('should be created', () => {

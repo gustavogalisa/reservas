@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Area} from "../../shared/model/area";
-import {AreaService} from "../../shared/services/area.service";
-import {MatDialogRef} from "@angular/material/dialog";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {Area} from '../../shared/model/area';
+import {AreaService} from '../../shared/services/area.service';
+import {MatDialogRef} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { AreaFirestoreService } from '../../shared/services/area-firestore.service';
 
 @Component({
   selector: 'app-registration-areas',
@@ -19,7 +20,7 @@ export class RegistrationAreasComponent implements OnInit {
 
 
   constructor(
-    private areaService: AreaService,
+    private areaService: AreaFirestoreService,
     public dialogRef: MatDialogRef<RegistrationAreasComponent>,
   ) {
     this.area = new Area();
@@ -37,12 +38,13 @@ export class RegistrationAreasComponent implements OnInit {
     this.area.name = this.input_name;
     this.area.image = this.input_image;
     this.area.description = this.input_description;
-    this.area.reserves = []
+    this.area.reserves = [];
+    console.log('passou');
     this.areaService.create(this.area).subscribe(
       area => console.log(area)
     );
     this.area = new Area();
     this.cancel();
-    window.location.reload();
+    //window.location.reload();
   }
 }
