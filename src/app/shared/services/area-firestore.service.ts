@@ -43,6 +43,6 @@ export class AreaFirestoreService {
     // removendo id pois não vamos guardar nos dados do documento, mas sim usar apenas como id para recuperar o documento
     const id = area.id;
     delete area.id;
-    return from(this.colecaoAreas.doc(area.id).update(Object.assign({}, area)));
+    return from(this.colecaoAreas.doc(id).update(Object.assign({}, area)));
   }
 }
